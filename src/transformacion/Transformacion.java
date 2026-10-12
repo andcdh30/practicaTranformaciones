@@ -9,13 +9,11 @@ import javax.swing.event.*;
  */
 public class Transformacion extends JPanel{
     
-    int x1=120, y1=0;
+    int x1=120, y1=120;
     
     public Transformacion() {
         // Crear slider de 0° a 360°
 //        JSlider slider = new JSlider(0, 150);
-//        slider.setMajorTickSpacing(10);
-//        slider.setMinorTickSpacing(15);
 //        slider.setPaintTicks(true);
 //        slider.setPaintLabels(true);
 //
@@ -42,25 +40,25 @@ public class Transformacion extends JPanel{
         g2.setColor(Color.BLUE);
         g2.draw(cuadrado);
         
-        //Traslacion
+//        //Traslacion
         AffineTransform traslacion =   AffineTransform.getTranslateInstance(x1, y1);
         Shape cuadradoTrasladado = traslacion.createTransformedShape(cuadrado);
         g2.setColor(Color.RED);
         g2.draw(cuadradoTrasladado);
-//        
-//        //Escalamiento
-//        AffineTransform escala = AffineTransform.getScaleInstance(1.5, 0.5);
+////        
+////        //Escalamiento
+//        AffineTransform escala = AffineTransform.getScaleInstance(2, 2);
 //        Shape cuadradoEscalado = escala.createTransformedShape(cuadrado);
 //        g2.setColor(Color.GREEN);
 //        g2.draw(cuadradoEscalado);
-//
-//       //Rotacion
+////
+////       //Rotacion
 //        AffineTransform rotacion = AffineTransform.getRotateInstance(Math.toRadians(45), 100, 100);
 //        Shape cuadradoRotado = rotacion.createTransformedShape(cuadrado);
 //        g2.setColor(Color.ORANGE);
 //        g2.draw(cuadradoRotado);
-//
-//        //sesgado
+////
+////        //sesgado
 //        AffineTransform sesgado = AffineTransform.getShearInstance(0.5, 0.2);
 //        Shape cuadradoSesgado = sesgado.createTransformedShape(cuadrado);
 //        g2.setColor(Color.MAGENTA);
